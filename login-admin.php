@@ -18,8 +18,6 @@
             <input type="password" id="password" placeholder="Contraseña">
             <button type="submit">Ingresar</button>
             <a href="#" class="forgot-password">¿Olvidaste la contraseña?</a>
-            <button type="button" class="create-account">Crea una cuenta</button>
-            <button type="button" class="admin-login" onclick="window.location.href='login-admin.php'">Ingresa como administrador</button>
         </form>
     </div>
 </div>
