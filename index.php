@@ -13,7 +13,7 @@
         <img src="./Imagenes/logo.PNG" alt="Logo de la Aerolínea">
     </div>
     <div class="login-container">
-        <form class="login-form"  method="post" action="conexion2.php">
+        <form class="login-form"  method="post" action="validar_login.php">
         <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico">
             <input type="password" id="password" name="password" placeholder="Contraseña">
             <button type="submit">Ingresar</button>
@@ -24,4 +24,4 @@
 </div>
 
 </body>
-</html>
+</html> 
