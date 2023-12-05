@@ -1,6 +1,6 @@
 <?php
 // Incluye el archivo de conexión
-include("conexion2.php");
+include("conexiondb.php");
 $con = conectar();
 
 // Verifica si hay una petición POST
