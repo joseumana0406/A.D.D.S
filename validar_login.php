@@ -28,8 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Compara la contraseña en texto plano
         if ($user && $user['password'] === $password) {
             // Si la contraseña coincide, el usuario se autentica correctamente
-            echo "Usuario autenticado con éxito.";
-            // Aquí podrías redirigir al usuario o iniciar una sesión
+            header('Location: principal.html');
+            exit;
         } else {
             // Si la contraseña no coincide, muestra un mensaje de error
             echo "Email o contraseña incorrectos.";
