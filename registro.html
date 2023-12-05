@@ -14,12 +14,13 @@
         <img src="./Imagenes/logo.PNG" alt="Logo Panama Canal Air">
     </div>
     <div class="registration-container">
-        <form class="registration-form">
-            <input type="email" id="email" placeholder="Ingrese su correo electrónico">
-            <input type="text" id="name" placeholder="Nombre">
-            <input type="text" id="surname" placeholder="Apellido">
-            <input type="password" id="password" placeholder="Contraseña">
-            <input type="password" id="repeat-password" placeholder="Repita contraseña">
+            <form class="registration-form" action="registro.php" method="post">
+
+            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico">
+            <input type="text" id="name" name="name" placeholder="Nombre">
+            <input type="text" id="lastname" name="lastname" placeholder="Apellido">
+            <input type="password" id="password" name="password" placeholder="Contraseña">
+            <input type="password" id="repeat-password" name="repeat-password"  placeholder="Repita contraseña">
             <button type="submit">Registrar</button>
         </form>
     </div>
