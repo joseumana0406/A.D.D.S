@@ -26,7 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = mysqli_fetch_assoc($result);
         
         // Compara la contraseña en texto plano
-        if ($user && $user['password'] === $password) {
+        //if ($user && $user['password'] === $password) {
+            if ($user && password_verify($password, $user['password'])) {
             // Si la contraseña coincide, el usuario se autentica correctamente
             header('Location: principal.html');
             exit;

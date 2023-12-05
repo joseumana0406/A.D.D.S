@@ -1,5 +1,5 @@
 <?php
-include("conexion2.php"); 
+include("conexiondb.php"); 
 $con = conectar();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
