@@ -1,0 +1,4 @@
+1.el archivo conexion2.php solo esta realizando la conexion a la base de datos
+2. la base de datos se llama $user="root"; $pass=""; $server="localhost"; $bd="air";
+3. el archivo validar_login llama a la conexion que es index.php para hacer la conexion y luego valida 
+si dentro de la tabla users el email y password coninciden y si es asi entonces envia a la pagina principal.html
