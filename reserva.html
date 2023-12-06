@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserva de Vuelo</title>
+<link rel="stylesheet" href="/css/reserva.css">
+</head>
+<body>
+<div class="booking-panel">
+    <h1>¿A dónde quieres volar?</h1>
+    <form>
+        <div class="form-section">
+            <label for="round-trip">Tipo de viaje:</label>
+            <select id="round-trip">
+                <option value="round">Ida y vuelta</option>
+                <option value="one-way">Solo ida</option>
+            </select>
+
+            <label for="adults">Número de adultos:</label>
+            <select id="adults">
+                <option value="1">1 Adulto</option>
+                <option value="2">2 Adultos</option>
+                <!-- Más opciones según necesidad -->
+            </select>
+        </div>
+
+        <div class="form-section">
+            <label for="origin">Origen:</label>
+            <input type="text" id="origin" placeholder="Ciudad o aeropuerto">
+
+            <label for="destination">Destino:</label>
+            <input type="text" id="destination" placeholder="Ciudad o aeropuerto">
+        </div>
+
+        <div class="form-section">
+            <label for="dates">Fechas:</label>
+            <input type="text" id="dates" placeholder="Seleccionar fechas">
+        </div>
+
+        <div class="form-section">
+            <button type="submit">Buscar Vuelos</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
