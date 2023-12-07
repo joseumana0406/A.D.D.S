@@ -27,9 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($con, $query);
 
     if ($result) {
-        echo "Registro exitoso.";
-        // Aquí podrías redirigir al usuario a la página de inicio de sesión o a cualquier otra página.
-        // header("Location: index.html");
+        header('Location: index.html');
+            exit;
         exit;
     } else {
         echo "Error en el registro: " . mysqli_error($con);
