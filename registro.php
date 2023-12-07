@@ -5,8 +5,8 @@ $con = conectar();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener los valores del formulario.
     $email = mysqli_real_escape_string($con, $_POST['email']);
-    $name = mysqli_real_escape_string($con, $_POST['name']);
-    $lastname = mysqli_real_escape_string($con, $_POST['lastname']);
+    $nombre = mysqli_real_escape_string($con, $_POST['nombre']);
+    $apellido = mysqli_real_escape_string($con, $_POST['apellido']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
     $repeatPassword = mysqli_real_escape_string($con, $_POST['repeat-password']);
 
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT); // Usar esto en lugar de texto plano.
 
     // Preparar la consulta SQL.
-    $query = "INSERT INTO users (email, name, lastname, password) VALUES ('$email', '$name', '$lastname', '$hashedPassword')";
+    $query = "INSERT INTO usuarios (nombre, apellido, email, password) VALUES ('$nombre', '$apellido', '$email', '$hashedPassword')";
 
     // Ejecutar la consulta.
     $result = mysqli_query($con, $query);

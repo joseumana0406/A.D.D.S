@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Crea la consulta SQL para buscar el usuario por email
-    $query = "SELECT * FROM users WHERE email = '$email'";
+    $query = "SELECT * FROM usuarios WHERE email = '$email'";
     
     // Ejecuta la consulta
     $result = mysqli_query($con, $query);
