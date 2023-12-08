@@ -18,9 +18,9 @@ En el proyecto se adjuntara diferentes manuales para su uso, configuración y ex
 
 
 AUTORES Y RECONOCIMIENTO  
-Jose Umaña
-Josemir Espinoza
-Juan D. Vergara
+Jose Umaña  
+Josemir Espinoza  
+Juan D. Vergara  
 
 
 
