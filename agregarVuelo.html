@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Vuelo</title>
+    <style>
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+        }
+        input[type="text"], input[type="datetime-local"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form action="agregarVuelo.php" method="post">
+        <label for="numeroVuelo">Número de Vuelo:</label>
+        <input type="text" id="numeroVuelo" name="numeroVuelo" required>
+
+        <label for="origen">Origen:</label>
+        <input type="text" id="origen" name="origen" required>
+
+        <label for="destino">Destino:</label>
+        <input type="text" id="destino" name="destino" required>
+
+        <label for="horaSalida">Hora de Salida:</label>
+        <input type="datetime-local" id="horaSalida" name="horaSalida" required>
+
+        <label for="horaLlegada">Hora de Llegada:</label>
+        <input type="datetime-local" id="horaLlegada" name="horaLlegada" required>
+
+        <input type="submit" value="Agregar Vuelo">
+    </form>
+</div>
+
+</body>
+</html>

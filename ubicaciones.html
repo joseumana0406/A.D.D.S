@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seguimiento de Vuelos</title>
+    <style>
+        #map { height: 400px; width: 100%; }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_CLAVE_API_AQUI&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 6,
+                center: {lat: -33.865143, lng: 151.209900}
+            });
+            // Aquí se añadirían los marcadores basados en los datos de la base de datos
+        }
+    </script>
+</head>
+<body>
+    <div id="map"></div>
+</body>
+</html>
