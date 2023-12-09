@@ -8,7 +8,7 @@
             margin: auto;
             padding: 20px;
         }
-        input[type="text"], input[type="datetime-local"] {
+        input[type="text"], input[type="datetime-local"], input[type="number"] {
             width: 100%;
             padding: 10px;
             margin: 5px 0 20px 0;
@@ -34,20 +34,30 @@
 
 <div class="container">
     <form action="agregarVuelo.php" method="post">
-        <label for="numeroVuelo">Número de Vuelo:</label>
-        <input type="text" id="numeroVuelo" name="numeroVuelo" required>
+        <label for="numeroVuelo">Numero de Vuelo:</label>
+        <input type="text" id="numeroVuelo" name="id" required>
 
-        <label for="origen">Origen:</label>
-        <input type="text" id="origen" name="origen" required>
+        <label for="origen">Origen del Vuelo:</label>
+        <input type="text" id="origen" name="origen_de_vuelo" required>
 
-        <label for="destino">Destino:</label>
-        <input type="text" id="destino" name="destino" required>
+        <label for="destino">Destino del Vuelo:</label>
+        <input type="text" id="destino" name="destino_de_vuelo" required>
 
         <label for="horaSalida">Hora de Salida:</label>
-        <input type="datetime-local" id="horaSalida" name="horaSalida" required>
+        <input type="datetime-local" id="horaSalida" name="salida" required>
 
         <label for="horaLlegada">Hora de Llegada:</label>
-        <input type="datetime-local" id="horaLlegada" name="horaLlegada" required>
+        <input type="datetime-local" id="horaLlegada" name="llegada" required>
+
+        <label for="rutaId">Ruta:</label>
+        <input type="number" id="rutaId" name="ruta_id" required>
+
+        <label for="controlDeTraficoId">Control de Trafico:</label>
+        <input type="number" id="controlDeTraficoId" name="control_de_trafico_id" required>
+
+        <!-- Nuevo campo para aerolinea_id -->
+        <label for="aerolineaId">Aerolinea:</label>
+        <input type="number" id="aerolineaId" name="aerolinea_id" required>
 
         <input type="submit" value="Agregar Vuelo">
     </form>
