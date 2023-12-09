@@ -1,4 +1,6 @@
 <?php
+session_start(); // Iniciar la sesión al principio del script
+
 // Incluir archivo de conexión a la base de datos
 include("conexiondb.php");
 
@@ -19,19 +21,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['equipaje_id'])) {
     // Obtener los resultados
     $result = $stmt->get_result();
 
+    // Almacenar resultados en la sesión
+    $_SESSION['resultados'] = array();
     if ($result->num_rows > 0) {
-        // Salida de datos de cada fila
         while($row = $result->fetch_assoc()) {
-            echo "ID: " . $row["id"]. " - Pasajero ID: " . $row["pasajero_id"]. " - Estado: " . $row["estado"]. "<br>";
+            array_push($_SESSION['resultados'], $row);
         }
-    } else {
-        echo "No se encontraron resultados para el ID de equipaje: $equipajeId";
     }
 
-    // Cerrar la declaración
+    // Cerrar la declaración y la conexión
     $stmt->close();
-}
+    $con->close();
 
-// Cerrar la conexión
-$con->close();
+    // Redirigir a la página de mostrar resultados
+    header("Location: mostrar_resultados.php");
+    exit();
+}
 ?>

@@ -4,22 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva de Vuelo</title>
-    <link rel="stylesheet" href="/css/reserva2.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+        .booking-panel {
+            margin-left: 250px;
+            padding: 1px 16px;
+            height: 1000px; /* Solo para demostración, se debería ajustar */
+        }
+        header {
+            background: #2a81c9;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #140501 3px solid;
+            width: 100%;
+        }
+        .booking-panel h1 {
+            color: #2a81c9;
+            margin: 0;
+            padding: 20px 0;
+        }
+        .form-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .form-section label, .form-section input, .form-section select, .form-section button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .form-section button {
+            height: 34px;
+            background: #420dd4;
+            border: 0;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
 
 <div class="sidebar">
     <a href="principal.html">Principal</a>
     <a href="reserva.html">Reserva de Vuelos</a>
-    <a href="rastreo.html">Rastreo de equipaje</a>
+    <a href="trakinEquipaje.html">Rastreo de equipaje</a>
     <a href="#">Checkin</a>
     <a href="#">Explore</a>
-    <a href="index.html">Cerrar Sesion</a>
-    <!-- Otros enlaces según sea necesario -->
+    <a href="index.html">Cerrar Sesión</a>
 </div>
 
 <div class="booking-panel">
-    <h1>¿A dónde quieres volar?</h1>
+    <header>
+        <h1>Reserva de Vuelo</h1>
+    </header>
     <form>
         <div class="form-section">
             <label for="round-trip">Tipo de viaje:</label>
