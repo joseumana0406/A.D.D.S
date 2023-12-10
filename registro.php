@@ -10,6 +10,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = mysqli_real_escape_string($con, $_POST['password']);
     $repeatPassword = mysqli_real_escape_string($con, $_POST['repeat-password']);
 
+
+    
     // Verifica si las contraseñas coinciden.
     if ($password !== $repeatPassword) {
         echo "Las contraseñas no coinciden.";
